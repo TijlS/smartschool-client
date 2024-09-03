@@ -601,7 +601,7 @@ module.exports = (function () {
     // Workaround error senderIdentifier = 'Null' not accepted. Simply delete it
     if (params.senderIdentifier === "Null") delete params.senderIdentifier;
 
-    if (params.attachments === []) {
+    if (params.attachments.length === 0) {
       delete params.attachments;
     } else {
       params.attachments = JSON.stringify(params.attachments);
